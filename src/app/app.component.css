@@ -1,0 +1,48 @@
+.mainBox {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+.menu-contect {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+.menu-contect > .title p {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+.menu-contect > .title > .name p {
+  font-weight: 800;
+  font-size: xxx-large;
+  color: rgb(125, 125, 125);
+}
+.menu-contect > .title > .nick p {
+  font-weight: 600;
+  font-size: xx-large;
+  color: rgb(149, 149, 149);
+}
+.menu-contect > .buttons {
+  margin-top: 20px;
+}
+.menu-contect > .buttons ul > li {
+  margin: 10px;
+  display: inline;
+}
+.content {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: left;
+  opacity: 0.8;
+}
+.content > div {
+  padding: 15px;
+  display: flex;
+  height: 100%;
+}

@@ -1,0 +1,6 @@
+.bg {
+  z-index: -100;
+  height: max-content;
+  width: max-content;
+  position: absolute;
+}

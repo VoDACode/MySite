@@ -1,0 +1,23 @@
+.selected {
+  border-bottom: 3px solid black;
+}
+button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 5px;
+  border-radius: 0;
+  background-color: white;
+}
+div:hover {
+  background-color: black;
+  opacity: 0.4;
+}
+img {
+  width: 60px;
+  height: 60px;
+}
+div {
+  display: inline-block;
+  border-radius: 5px;
+}
