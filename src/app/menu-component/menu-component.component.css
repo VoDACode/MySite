@@ -1,6 +1,12 @@
 .selected {
   border-bottom: 3px solid black;
 }
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
 button {
   background: none;
   border: none;
@@ -9,15 +15,25 @@ button {
   border-radius: 0;
   background-color: white;
 }
-div:hover {
-  background-color: black;
+.content {
+  border-radius: 5px;
+}
+.content:hover {
   opacity: 0.4;
 }
 img {
-  width: 60px;
-  height: 60px;
+  text-align: center;
+  width: 65px;
+  height: 65px;
 }
-div {
+.box {
   display: inline-block;
   border-radius: 5px;
+  height: 100px;
+}
+.content *:hover {
+  cursor: pointer;
+}
+.tip {
+  text-align: center;
 }

@@ -1,0 +1,61 @@
+<div #miniBox class="menu-mini">
+  <div class="load left"></div>
+  <div class="load right"></div>
+  <div class="content">
+    <div class="buttons">
+      <ul>
+        <li *ngFor="let item of items">
+          <div class="box">
+            <div (click)="item.onclick(item)">
+              <button>
+                <img src="./assets/imgs/{{item.img}}">
+              </button>
+            </div>
+            <div></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div #fullBox class="mainBox">
+  <div class="menu-contect">
+    <div class="title">
+      <div class="name">
+        <p>Dmytro Vovk</p>
+      </div>
+      <div class="nick">
+        <p>VoDA</p>
+      </div>
+    </div>
+    <div class="buttons">
+      <ul>
+        <li>
+          <app-menu-component url="about" tip="About me" imgSrc="./assets/imgs/about.png"
+            (onselect)="onSelectItem($event)">
+          </app-menu-component>
+        </li>
+        <li>
+          <app-menu-component url="skills" tip="Skills" imgSrc="./assets/imgs/icons8-server-60.png"
+            (onselect)="onSelectItem($event)">
+          </app-menu-component>
+        </li>
+        <li>
+          <app-menu-component url="projects" tip="Projects" imgSrc="./assets/imgs/icons8-code-96.png"
+            (onselect)="onSelectItem($event)">
+          </app-menu-component>
+        </li>
+        <li>
+          <app-menu-component url="contacts" tip="Contacts" imgSrc="./assets/imgs/icons8-contact-58.png"
+            (onselect)="onSelectItem($event)">
+          </app-menu-component>
+        </li>
+        <li>
+          <app-menu-component url="donate" tip="Donate" imgSrc="./assets/imgs/icons8-donate-100.png"
+            (onselect)="onSelectItem($event)">
+          </app-menu-component>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.box {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.box > .item {
+  width: 100px;
+}

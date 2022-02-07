@@ -1,5 +1,11 @@
-<div [classList]="selected ? 'selected' : ''">
-  <button [routerLink]="[url]">
-    <img [src]="imgSrc"/>
-  </button>
+<div class="box">
+  <div [classList]="selected ? 'selected content' : 'content'" (mouseleave)="onMouseLeave()"
+    (mouseenter)="onMousEnter()">
+    <button [routerLink]="[url]">
+      <img [src]="imgSrc" />
+    </button>
+  </div>
+  <div [classList]="showTip ? 'show tip' : 'hide tip'">
+    <span>{{tip}}</span>
+  </div>
 </div>

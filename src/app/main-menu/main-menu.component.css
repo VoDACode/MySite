@@ -1,0 +1,93 @@
+.menu-mini,
+.mainBox * {
+  z-index: 100;
+}
+.mainBox {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+.menu-contect {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+.menu-contect > .title p {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+.menu-contect > .title > .name p {
+  font-weight: 800;
+  font-size: xxx-large;
+  color: rgb(125, 125, 125);
+}
+.menu-contect > .title > .nick p {
+  font-weight: 600;
+  font-size: xx-large;
+  color: rgb(149, 149, 149);
+}
+.menu-contect > .buttons {
+  margin-top: 20px;
+}
+.menu-contect > .buttons ul > li {
+  margin: 10px;
+  display: inline;
+}
+
+.menu-mini {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.menu-mini > .load {
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 45, 113, 0.765);
+  opacity: 0.5;
+}
+.menu-mini > .load.left {
+  left: 0;
+}
+.menu-mini > .load.right {
+  right: 0;
+}
+.menu-mini > .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  z-index: 150;
+}
+.menu-mini > .content > .buttons button {
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  outline: inherit;
+}
+.menu-mini > .content > .buttons img {
+  height: 32px;
+  width: 32px;
+  -webkit-filter: invert(90%); /* Safari/Chrome */
+  filter: invert(90%);
+}
+.menu-mini > .content > .buttons ul > li {
+  display: inline;
+  margin: 10px;
+}
+.menu-mini > .content > .buttons div {
+  display: inline;
+}
+.menu-mini > .content > .buttons img:hover {
+  -webkit-filter: invert(50%); /* Safari/Chrome */
+  filter: invert(50%);
+}

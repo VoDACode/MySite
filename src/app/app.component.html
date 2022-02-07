@@ -1,37 +1,17 @@
 <app-background></app-background>
-<div class="mainBox">
-  <div class="menu-contect">
-    <div class="title">
-      <div class="name">
-        <p>Dmytro Vovk</p>
-      </div>
-      <div class="nick">
-        <p>VoDA</p>
-      </div>
-    </div>
-    <div class="buttons">
-      <ul>
-        <li>
-          <app-menu-component url="about" redirectUrl="" imgSrc="./assets/imgs/about.png"></app-menu-component>
-        </li>
-        <li>
-          <app-menu-component url="skills" imgSrc="./assets/imgs/icons8-server-60.png"></app-menu-component>
-        </li>
-        <li>
-          <app-menu-component url="projects" imgSrc="./assets/imgs/icons8-code-96.png"></app-menu-component>
-        </li>
-        <li>
-          <app-menu-component url="contacts" imgSrc="./assets/imgs/icons8-contact-58.png"></app-menu-component>
-        </li>
-        <li>
-          <app-menu-component url="donate" imgSrc="./assets/imgs/icons8-donate-100.png"></app-menu-component>
-        </li>
-      </ul>
+<app-main-menu></app-main-menu>
+<div>
+  <div class="preview-content-box left">
+    <div>
     </div>
   </div>
-</div>
-<div class="content">
-  <div>
-    <router-outlet></router-outlet>
+  <div class="content-box main-content">
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="preview-content-box right">
+    <div>
+    </div>
   </div>
 </div>

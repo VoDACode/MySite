@@ -7,12 +7,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: '', component: AboutMeComponent},
-  {path: 'about', component: AboutMeComponent},
-  {path: 'skills', component: SkillsComponent},
-  {path: 'projects', component: ProjectsComponent},
-  {path: 'contacts', component: ContactsComponent},
-  {path: 'donate', component: DonateComponent}
+  { path: '', component: AboutMeComponent },
+  { path: 'about', component: AboutMeComponent },
+  { path: 'skills', component: SkillsComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'contacts', component: ContactsComponent },
+  { path: 'donate', component: DonateComponent }
 ];
 
 @NgModule({

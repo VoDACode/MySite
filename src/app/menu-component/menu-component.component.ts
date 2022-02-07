@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, AfterViewInit } from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit, Output, EventEmitter } from '@angular/core'
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -6,29 +6,54 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
   templateUrl: './menu-component.component.html',
   styleUrls: ['./menu-component.component.css']
 })
-export class MenuComponentComponent implements AfterViewInit, OnInit {
+export class MenuComponentComponent implements AfterViewInit {
   @Input()
   imgSrc: string = "";
   @Input()
   url: string = "";
   @Input()
   redirectUrl: string | undefined;
+  @Input()
+  tip: string = "";
+  @Output()
+  onselect = new EventEmitter<MenuItemSelectEvent>();
+
+
   selected: boolean = false;
+
+  showTip = false;
   constructor(private router: Router) {
   }
-  ngOnInit(): void {
-    if(!this.redirectUrl){
+  ngAfterViewInit(): void {
+    if (this.redirectUrl == undefined) {
       this.redirectUrl = this.url;
     }
-  }
-  ngAfterViewInit(): void {
     this.router.events.subscribe((val) => {
       //@ts-ignore
-      if(!val.url)
+      if (!val.url)
         return;
       //@ts-ignore
       let url = val.url.slice(1);
       this.selected = (url == this.redirectUrl || this.url == url);
+      if (this.selected) {
+        let data = new MenuItemSelectEvent();
+        data.imgSrc = this.imgSrc;
+        data.redirectUrl = this.redirectUrl;
+        data.url = this.url;
+        this.onselect.emit(data);
+      }
     });
   }
+  onMouseLeave(): void {
+    this.showTip = false;
+  }
+  onMousEnter(): void {
+    this.showTip = true;
+  }
+}
+
+export class MenuItemSelectEvent {
+  url: string = "";
+  redirectUrl: string | undefined;
+  imgSrc: string = "";
 }

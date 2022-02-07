@@ -10,6 +10,8 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { DonateComponent } from './donate/donate.component';
 import { BackgroundComponent } from './background/background.component';
 import { MenuComponentComponent } from './menu-component/menu-component.component';
+import { ListReflectorComponent } from './list-reflector/list-reflector.component';
+import { MainMenuComponent } from './main-menu/main-menu.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MenuComponentComponent } from './menu-component/menu-component.componen
     ContactsComponent,
     DonateComponent,
     BackgroundComponent,
-    MenuComponentComponent
+    MenuComponentComponent,
+    ListReflectorComponent,
+    MainMenuComponent
   ],
   imports: [
     BrowserModule,
