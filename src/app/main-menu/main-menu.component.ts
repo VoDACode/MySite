@@ -66,16 +66,16 @@ export class MainMenuComponent implements OnInit {
   //#region Choice animation
   choiceAnimation(currentIndex: number, previousIndex: number, ended: Function): void {
     if (currentIndex > previousIndex) {
-      this.goToAnimation('left', ended);
-    } else if (currentIndex < previousIndex) {
       this.goToAnimation('right', ended);
+    } else if (currentIndex < previousIndex) {
+      this.goToAnimation('left', ended);
     } else {
       return;
     }
   }
   private goToAnimation(side: 'left' | 'right', ended: Function) {
     this.clearScrollAnimation(side);
-    $(".content-box").animate({ top: "100px", bottom: "5%" }, 250, () => {
+    $(".content-box").animate({ top: "100px", bottom: "5%", left: "5%", right: "5%" }, 250, () => {
       let gotoObj = side == "left" ? { right: "-45%", left: "100%" } : { right: "100%", left: "-45%" }
       $(".content-box").animate(gotoObj, 1500);
       setTimeout(() =>
