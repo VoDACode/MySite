@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, EventEmitter } from '@angular/core';
+import { environment } from './../../environments/environment';
+import { AboutMeComponent } from './../about-me/about-me.component';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { MenuItemSelectEvent } from '../menu-component/menu-component.component';
 import * as $ from 'jquery';
-import { Router, RoutesRecognized, ActivatedRoute } from '@angular/router';
-import { filter, pairwise } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-menu',
@@ -14,7 +15,8 @@ export class MainMenuComponent implements OnInit {
   @ViewChild("fullBox", { static: false })
   private fullBox: ElementRef<HTMLDivElement> | undefined;
   isFullSize = true;
-
+  queueChoiceAnimation: { cIndex: number, pIndex: number, endf: Function }[] = [];
+  isChoiceAnimation = false;
   isStartMinAnimation = false;
   isStartMaxAnimation = false;
   constructor(private router: Router) {
@@ -44,6 +46,10 @@ export class MainMenuComponent implements OnInit {
   }
 
   onclickMiniItem(item: ItemInMitiMenu): void {
+    if (this.isChoiceAnimation == true) {
+      return;
+    }
+    this.isChoiceAnimation = true;
     let previousIndex = this.items.findIndex(p => p.selected);
     let currentIndex = this.items.findIndex(p => p == item);
     if (previousIndex == -1) {
@@ -51,6 +57,7 @@ export class MainMenuComponent implements OnInit {
     }
     if (previousIndex == 0 || previousIndex == currentIndex) {
       this.router.navigate([item.routerLink]);
+      this.isChoiceAnimation = false;
       return;
     }
     this.items[currentIndex].selected = true;
@@ -58,6 +65,7 @@ export class MainMenuComponent implements OnInit {
       this.items[previousIndex].selected = false;
       this.choiceAnimation(currentIndex, previousIndex, () => {
         this.router.navigate([item.routerLink]);
+        this.isChoiceAnimation = false;
       });
     }
   }
@@ -65,10 +73,14 @@ export class MainMenuComponent implements OnInit {
 
   //#region Choice animation
   choiceAnimation(currentIndex: number, previousIndex: number, ended: Function): void {
+    const endf = () => {
+      ended(arguments);
+      this.isChoiceAnimation = false;
+    }
     if (currentIndex > previousIndex) {
-      this.goToAnimation('right', ended);
+      this.goToAnimation('right', endf);
     } else if (currentIndex < previousIndex) {
-      this.goToAnimation('left', ended);
+      this.goToAnimation('left', endf);
     } else {
       return;
     }
@@ -101,7 +113,7 @@ export class MainMenuComponent implements OnInit {
     f();
   }
   private clearContentScrollAnimation() {
-    $(".content-box").css("top", "80px").css("bottom", "0").css("right", "0").css("left", "0").css("zoom", "100%").css("opacity", "1").css("display", "block");
+    $(".content-box").css("top", "80px").css("bottom", "0").css("right", "0").css("left", "0");
   }
   private clearScrollAnimation(side: 'left' | 'right') {
     $(`.preview-content-box.${side}`).css("bottom", "5%");
@@ -130,10 +142,10 @@ export class MainMenuComponent implements OnInit {
       $(".menu-mini > .load.left").animate({ opacity: '0.5' }, 500);
       $(".menu-mini > .load.right").animate({ opacity: '0.5' }, 500);
     });
-    console.log("EDIT .content-box");
     $(".content-box").animate({ left: '45%', right: '45%', bottom: '45%', top: '45%', zoom: '0' }, 1000, () => {
       $(".content-box").animate({ opacity: '0' }, 500);
     });
+
   }
 
   minAnimation(): void {
@@ -152,10 +164,17 @@ export class MainMenuComponent implements OnInit {
         this.isStartMinAnimation = false;
       });
     });
-    if (this.isFullSize)
-      $(".content-box").animate({ opacity: '1' }, 500, () => {
+    if (this.isFullSize) {
+      $(".content-box").animate({ opacity: '0.8' }, 500, () => {
         $(".content-box").animate({ left: '0', right: '0', bottom: '0', top: '80px', zoom: '100%' }, 1000);
+        for (let i = 0; i < environment.ILike.length; i++) {
+          $(`#skills-content-item-${i}`).css("top", "0");
+        }
+        for (let i = 0; i < environment.DevList.length; i++) {
+          $(`#develop-content-item-${i}`).css("top", "0");
+        }
       });
+    }
   }
   //#endregion
 }

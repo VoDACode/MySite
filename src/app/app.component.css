@@ -1,6 +1,7 @@
 .preview-content-box {
   bottom: 0;
   top: 80px;
+  opacity: 0.8;
 }
 .preview-content-box,
 .content-box {

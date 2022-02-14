@@ -1,8 +1,38 @@
-<div>
-  <p>Hello!</p>
-  <p>My name is Dmytro.</p>
-  <p>I'm {{age}}.</p>
-  <p>I live in Kharkiv.</p>
-  <p>I like <app-list-reflector [items]="iLike" [delay]="1000" [width]="105"></app-list-reflector>.</p>
-  <p>I <app-list-reflector [items]="devList" [delay]="1000" [width]="28"></app-list-reflector> developer.</p>
+<div class="contect-box">
+  <div class="grid grid-main-content">
+    <div class="text-center about-skills">
+      <div>
+        <p class="title-string">I like</p>
+        <div class="skills-content">
+          <div class="boxs" [style.height]="iLike().length*80 + (iLike().length-1)*20 + 'px'">
+            <div *ngFor="let item of iLike(); index as i" id="skills-content-item-{{i}}" class="item center-horizontal">
+              <div class="content center">
+                <p>{{item}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <p class="my-name">Hello!</p>
+      <p class="my-name">My name is Dmytro. I'm {{age}}.</p>
+      <p class="my-name">I live in <a href="https://www.google.com/maps/place/Kharkiv">Kharkiv</a>.</p>
+    </div>
+    <div class="text-center about-skills">
+      <div>
+        <p class="title-string">I develop in</p>
+        <div class="develop-content">
+          <div class="boxs" [style.height]="devList().length*80 + (devList().length-1)*20 + 'px'">
+            <div *ngFor="let item of devList(); index as i" id="develop-content-item-{{i}}"
+              class="item center-horizontal">
+              <div class="content center">
+                <img src="{{item.img}}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,55 @@
+ul {
+  margin-left: 20%;
+}
+.grid-main-content {
+  grid-template-columns: auto auto auto;
+}
+.title-string {
+  font-size: xx-large;
+  opacity: 0;
+}
+.my-name {
+  opacity: 0;
+  font-size: xx-large;
+}
+.about-skills {
+  margin-top: 20%;
+}
+.about-skills p {
+  opacity: 0;
+}
+.develop-content > .boxs,
+.skills-content > .boxs {
+  position: relative;
+}
+.develop-content > .boxs > .item,
+.skills-content > .boxs > .item {
+  position: absolute;
+  height: 60px;
+  width: 95%;
+  text-align: center;
+  background-color: white;
+}
+.develop-content > .boxs > .item > .content,
+.skills-content > .boxs > .item > .content {
+  position: absolute;
+}
+.develop-content > .boxs > .item img,
+.develop-content > .boxs > .item p,
+.skills-content > .boxs > .item p {
+  vertical-align: middle;
+}
+.develop-content > .boxs > .item img {
+  height: 60px;
+  width: 60px;
+  opacity: 0;
+}
+.contect-box a {
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.contect-box a:hover {
+  color: rgb(91, 91, 91);
+}
