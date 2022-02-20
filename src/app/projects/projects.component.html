@@ -1,1 +1,47 @@
-<p>projects works!</p>
+<p class="center-horizontal title">My projects</p>
+<div class="main-content">
+  <div class="projects-list">
+    <div class="list">
+      <app-project-item-in-list *ngFor="let item of projects; index as i" [title]="item.title"
+        [description]="item.description" [selected]="item.select" (click)="onclick(item, i)">
+      </app-project-item-in-list>
+    </div>
+  </div>
+  <div class="about-project">
+    <div *ngIf="isView(0)">
+      <iframe #fileExchangerIframe src="http://drop.vodacode.space"></iframe>
+      <div class="description">
+        <p><b class="keywords">File Exchanger</b> web application allows you to create quickly your own
+          file sharer. <b class="keywords">File Exchanger</b> is essentially a web application that provides access to
+          files through a web
+          interface it also allows you to group devices to facilitate file sharing.</p>
+        <p>
+          This project using:
+          <a href="https://angular.io">Angular CLI</a> v12.2.0, <a
+            href="https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1">ASP.NET Core 3.1</a>, <a
+            href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap 5</a>, <a
+            href="https://jquery.com/">JQuery 3.6</a>, <a href="https://docs.microsoft.com/en-us/ef/core/">Entity
+            Framework Core</a> v5.
+        </p>
+        <p>
+          Sources: <a href="https://github.com/VoDACode/FileExchanger">GitHub</a>, <a
+            href="http://drop.vodacode.space">Example</a>.
+        </p>
+      </div>
+    </div>
+    <div *ngIf="isView(1)">
+      <div class="screenshots">
+        <img height="100%" width="100%" src=".\assets\imgs\screenshots\iis-web.png">
+      </div>
+      <div class="description">
+        <p><b class="keywords">IIS-web</b> allows you to manage <b class="keywords">IIS</b> through a web interface or
+          API.</p>
+        <p>Above you can see an example of the application interface.</p>
+        <p>This project using: <a href="https://nodejs.org/">NodeJS</a>, <a href="https://jquery.com/">JQuery 3.6</a>,
+          <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap 5</a>.
+        </p>
+        <p>Sources: <a href="https://github.com/VoDACode/iis-web-interface">GitHub</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>

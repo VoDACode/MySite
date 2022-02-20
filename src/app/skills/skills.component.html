@@ -1,17 +1,5 @@
-<div class="box">
-  <div class="item">
-    <ul>
-      <li>.NET</li>
-      <li>Angular</li>
-    </ul>
-  </div>
-  <div class="item">
-    2
-  </div>
-  <div class="item">
-    3
-  </div>
-  <div class="item">
-    4
-  </div>
+<p class="center-horizontal title">Skills</p>
+<div class="contect-box">
+  <app-skills-item *ngFor="let item of skills" [text]="item.text" [description]="item.description" [size]="item.size">
+  </app-skills-item>
 </div>

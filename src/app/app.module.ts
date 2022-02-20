@@ -12,6 +12,8 @@ import { BackgroundComponent } from './background/background.component';
 import { MenuComponentComponent } from './menu-component/menu-component.component';
 import { ListReflectorComponent } from './list-reflector/list-reflector.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
+import { SkillsItemComponent } from './skills-item/skills-item.component';
+import { ProjectItemInListComponent } from './project-item-in-list/project-item-in-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
     BackgroundComponent,
     MenuComponentComponent,
     ListReflectorComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    SkillsItemComponent,
+    ProjectItemInListComponent
   ],
   imports: [
     BrowserModule,

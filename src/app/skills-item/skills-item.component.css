@@ -1,0 +1,30 @@
+.content {
+  margin: 50px;
+  display: inline-block;
+  position: relative;
+}
+.box {
+  top: 0;
+}
+.content > .box span {
+  font-weight: 500;
+}
+.content > .box:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.description {
+  margin-top: 10px;
+  z-index: 300;
+  width: 225px;
+  position: fixed;
+  display: inline-block;
+  opacity: 0;
+}
+.description .box {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.description .box p {
+  text-align: center;
+}

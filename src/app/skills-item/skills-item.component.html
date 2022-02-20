@@ -1,0 +1,10 @@
+<div class="content">
+  <div #textBox class="box" (mousedown)="onShowDescription()" (mouseleave)="onHideDescription()">
+    <span [style.fontSize]="size+'px'">{{text}}</span>
+  </div>
+  <div class="description" [style.width]="descriptionSize+ 'px'" [id]="'skill'+textToId()+size">
+    <div class="box">
+      <p>{{description}}</p>
+    </div>
+  </div>
+</div>

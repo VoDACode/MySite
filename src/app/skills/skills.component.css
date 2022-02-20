@@ -1,9 +1,23 @@
-.box {
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+p.title {
+  font-size: xx-large;
 }
-.box > .item {
-  width: 100px;
+.contect-box {
+  margin-top: 5%;
+}
+.grid-main-content {
+  grid-template-columns: 50% 50%;
+}
+.sector.diagrams {
+  max-width: 50%;
+}
+.sector.diagrams div {
+  margin-bottom: 15%;
+}
+.sector.about p {
+  margin-bottom: 3%;
+  max-width: 50%;
+  margin-left: 10%;
+}
+.contect-box .sector {
+  margin: 20px 20px;
 }
