@@ -5,7 +5,7 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css', '../../assets/css/content.css']
+  styleUrls: ['./projects.component.css', '../../assets/css/content.css', '../../assets/css/urls.css']
 })
 export class ProjectsComponent implements OnInit {
   projects: ProjectModel[] = [];

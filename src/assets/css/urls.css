@@ -1,0 +1,11 @@
+a:visited {
+  color: rgb(0, 123, 255);
+}
+a {
+  color: rgb(0, 123, 255);
+}
+a:hover {
+  color: rgb(70, 159, 255);
+  cursor: pointer;
+  border: none;
+}

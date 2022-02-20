@@ -1,0 +1,52 @@
+.content-box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+img {
+  height: 32px;
+  width: 32px;
+}
+input[type="text"] {
+  height: 32px;
+  width: 400px;
+  border: none;
+}
+input[type="text"]:hover {
+  cursor: pointer;
+}
+.bit > .click > div,
+.bit,
+.content-box > div > div,
+.end {
+  position: relative;
+}
+.content-box > div > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 10px;
+}
+.border {
+  border: 1px solid rgb(140, 140, 140);
+  border-radius: 5px;
+}
+.end {
+  margin-top: 10px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: xx-large;
+}
+.bit > .click {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.bit > .click:hover {
+  cursor: pointer;
+}
+.bit > .click span {
+  letter-spacing: 3px;
+}
