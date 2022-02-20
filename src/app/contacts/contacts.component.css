@@ -1,0 +1,23 @@
+.box-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.title {
+  font-size: 90px;
+  font-weight: 200;
+  letter-spacing: 10px;
+}
+.box-content > div {
+  position: absolute;
+}
+.box-content svg {
+  margin: 25px;
+  height: 128px;
+  width: 128px;
+  fill: rgb(24, 77, 123);
+}
+.box-content svg:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
