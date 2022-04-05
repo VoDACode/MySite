@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="about-project">
-    <div *ngIf="isView(0)">
+    <section *ngIf="isView(0)">
       <iframe #fileExchangerIframe src="http://drop.vodacode.space"></iframe>
       <div class="description">
         <p><b class="keywords">File Exchanger</b> web application allows you to create quickly your own
@@ -28,8 +28,8 @@
             href="http://drop.vodacode.space">Example</a>.
         </p>
       </div>
-    </div>
-    <div *ngIf="isView(1)">
+    </section>
+    <section *ngIf="isView(1)">
       <div class="screenshots">
         <img height="100%" width="100%" src=".\assets\imgs\screenshots\iis-web.png">
       </div>
@@ -42,6 +42,6 @@
         </p>
         <p>Sources: <a href="https://github.com/VoDACode/iis-web-interface">GitHub</a>.</p>
       </div>
-    </div>
+    </section>
   </div>
 </div>

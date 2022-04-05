@@ -1,0 +1,14 @@
+span{
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+footer{
+    height: 25px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

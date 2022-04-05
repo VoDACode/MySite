@@ -1,8 +1,8 @@
-<div #miniBox class="menu-mini">
+<header #miniBox class="menu-mini">
   <div class="load left"></div>
   <div class="load right"></div>
   <div class="content">
-    <div class="buttons">
+    <nav class="buttons">
       <ul>
         <li *ngFor="let item of items">
           <div class="box">
@@ -16,9 +16,9 @@
           </div>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
-</div>
+</header>
 <div #fullBox class="mainBox">
   <div class="menu-contect">
     <div class="title">
@@ -29,7 +29,7 @@
         <p>VoDA</p>
       </div>
     </div>
-    <div class="buttons">
+    <nav class="buttons">
       <ul>
         <li>
           <app-menu-component url="about" tip="About me" imgSrc="./assets/imgs/about.png"
@@ -57,6 +57,6 @@
           </app-menu-component>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </div>

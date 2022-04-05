@@ -15,6 +15,7 @@ import { ListReflectorComponent } from './list-reflector/list-reflector.componen
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { SkillsItemComponent } from './skills-item/skills-item.component';
 import { ProjectItemInListComponent } from './project-item-in-list/project-item-in-list.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProjectItemInListComponent } from './project-item-in-list/project-item-
     ListReflectorComponent,
     MainMenuComponent,
     SkillsItemComponent,
-    ProjectItemInListComponent
+    ProjectItemInListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

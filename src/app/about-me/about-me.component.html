@@ -5,11 +5,11 @@
         <p class="title-string">I like</p>
         <div class="skills-content">
           <div class="boxs" [style.height]="iLike().length*80 + (iLike().length-1)*20 + 'px'">
-            <div *ngFor="let item of iLike(); index as i" id="skills-content-item-{{i}}" class="item center-horizontal">
+            <article *ngFor="let item of iLike(); index as i" id="skills-content-item-{{i}}" class="item center-horizontal">
               <div class="content center">
                 <p>{{item}}</p>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
@@ -24,12 +24,12 @@
         <p class="title-string">I develop in</p>
         <div class="develop-content">
           <div class="boxs" [style.height]="devList().length*80 + (devList().length-1)*20 + 'px'">
-            <div *ngFor="let item of devList(); index as i" id="develop-content-item-{{i}}"
+            <article *ngFor="let item of devList(); index as i" id="develop-content-item-{{i}}"
               class="item center-horizontal">
               <div class="content center">
                 <img src="{{item.img}}">
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
