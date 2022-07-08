@@ -3,17 +3,18 @@
   display: inline-block;
   position: relative;
 }
-.box {
+.description__box,
+.content__box{
   top: 0;
 }
-.content > .box span {
+.content__box span {
   font-weight: 500;
 }
-.content > .box:hover {
+.content__box:hover {
   opacity: 0.5;
   cursor: pointer;
 }
-.description {
+.content__description {
   margin-top: 10px;
   z-index: 300;
   width: 225px;
@@ -21,10 +22,10 @@
   display: inline-block;
   opacity: 0;
 }
-.description .box {
+.description__box {
   border-radius: 5px;
   border: 1px solid black;
 }
-.description .box p {
+.description__box p {
   text-align: center;
 }

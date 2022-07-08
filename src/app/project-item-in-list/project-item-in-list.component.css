@@ -5,9 +5,10 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.item > div {
+.item__title,
+.item__description{
   padding: 5px;
 }
-.item > .title {
+.item__title {
   font-size: x-large;
 }

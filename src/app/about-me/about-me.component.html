@@ -1,11 +1,12 @@
-<div class="contect-box">
-  <div class="grid grid-main-content">
-    <div class="text-center about-skills">
+<div class="content-box">
+  <div class="grid content-box__grid-main-content">
+    <div class="text-center grid-main-content__i-like about-skills">
       <div>
-        <p class="title-string">I like</p>
-        <div class="skills-content">
+        <p class="i-like__title title-string">I like</p>
+        <div class="i-like__skills-content skills-content">
           <div class="boxs" [style.height]="iLike().length*80 + (iLike().length-1)*20 + 'px'">
-            <article *ngFor="let item of iLike(); index as i" id="skills-content-item-{{i}}" class="item center-horizontal">
+            <article *ngFor="let item of iLike(); index as i" id="skills-content-item-{{i}}"
+              class="skills-content__box__item center-horizontal">
               <div class="content center">
                 <p>{{item}}</p>
               </div>
@@ -14,18 +15,18 @@
         </div>
       </div>
     </div>
-    <div class="text-center">
+    <div class="text-center grid-main-content__hi">
       <p class="my-name">Hello!</p>
       <p class="my-name">My name is Dmytro. I'm {{age}}.</p>
       <p class="my-name">I live in <a href="https://www.google.com/maps/place/Kharkiv">Kharkiv</a>.</p>
     </div>
-    <div class="text-center about-skills">
+    <div class="text-center grid-main-content__i-develop-in about-skills">
       <div>
-        <p class="title-string">I develop in</p>
-        <div class="develop-content">
+        <p class="i-develop-in__title title-string">I develop in</p>
+        <div class="i-develop-in__content develop-content">
           <div class="boxs" [style.height]="devList().length*80 + (devList().length-1)*20 + 'px'">
             <article *ngFor="let item of devList(); index as i" id="develop-content-item-{{i}}"
-              class="item center-horizontal">
+              class="i-develop-in__content__item center-horizontal">
               <div class="content center">
                 <img src="{{item.img}}">
               </div>

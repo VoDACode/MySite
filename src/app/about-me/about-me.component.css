@@ -1,7 +1,7 @@
 ul {
   margin-left: 20%;
 }
-.grid-main-content {
+.content-box__grid-main-content {
   grid-template-columns: auto auto auto;
 }
 .title-string {
@@ -12,44 +12,46 @@ ul {
   opacity: 0;
   font-size: xx-large;
 }
-.about-skills {
+.grid-main-content__i-like,
+.grid-main-content__i-develop-in{
   margin-top: 20%;
 }
-.about-skills p {
+.grid-main-content__i-like p,
+.grid-main-content__i-develop-in p {
   opacity: 0;
 }
-.develop-content > .boxs,
-.skills-content > .boxs {
+.i-develop-in__content > .boxs,
+.i-like__skills-content > .boxs {
   position: relative;
 }
-.develop-content > .boxs > .item,
-.skills-content > .boxs > .item {
+.i-develop-in__content__item,
+.skills-content__box__item {
   position: absolute;
   height: 60px;
   width: 95%;
   text-align: center;
   background-color: white;
 }
-.develop-content > .boxs > .item > .content,
-.skills-content > .boxs > .item > .content {
+.i-develop-in__content__item > .content,
+.skills-content__box__item > .content {
   position: absolute;
 }
-.develop-content > .boxs > .item img,
-.develop-content > .boxs > .item p,
-.skills-content > .boxs > .item p {
+.i-develop-in__content__item img,
+.i-develop-in__content__item p,
+.skills-content__box__item p {
   vertical-align: middle;
 }
-.develop-content > .boxs > .item img {
+.i-develop-in__content__item img {
   height: 60px;
   width: 60px;
   opacity: 0;
 }
-.contect-box a {
+.content-box a {
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
   color: black;
 }
-.contect-box a:hover {
+.content-box a:hover {
   color: rgb(91, 91, 91);
 }

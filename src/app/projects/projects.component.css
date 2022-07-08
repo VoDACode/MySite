@@ -7,13 +7,13 @@ p.title {
   grid-template-columns: 25% 75%;
   height: 85%;
 }
-.about-project,
-.projects-list {
+.main-content__about-project,
+.main-content__projects {
   position: relative;
   border: 1px solid rgb(0, 179, 255);
   border-radius: 5px;
 }
-.about-project > div {
+.main-content__about-project > section {
   height: 100%;
   width: 100%;
 }
@@ -22,6 +22,6 @@ iframe {
   height: 85%;
   border: none;
 }
-.about-project > div > .description {
+.about-project__description {
   padding: 5px;
 }

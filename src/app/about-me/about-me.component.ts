@@ -38,7 +38,7 @@ export class AboutMeComponent implements AfterViewInit {
           }
         });
         $(".about-skills p").animate({ opacity: 1 }, 1500);
-        $(".develop-content > .boxs > .item img").animate({ opacity: 1 }, 1500);
+        $(".i-develop-in__content__item img").animate({ opacity: 1 }, 1500);
       }, 500);
     }, 1000);
   }

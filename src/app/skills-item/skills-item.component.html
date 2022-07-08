@@ -1,9 +1,9 @@
 <div class="content">
-  <div #textBox class="box" (mousedown)="onShowDescription()" (mouseleave)="onHideDescription()">
+  <div #textBox class="content__box" (mousedown)="onShowDescription()" (mouseleave)="onHideDescription()">
     <span [style.fontSize]="size+'px'">{{text}}</span>
   </div>
-  <aside class="description" [style.width]="descriptionSize+ 'px'" [id]="'skill'+textToId()+size">
-    <div class="box">
+  <aside class="content__description" [style.width]="descriptionSize+ 'px'" [id]="'skill'+textToId()+size">
+    <div class="description__box">
       <p>{{description}}</p>
     </div>
   </aside>
