@@ -7,6 +7,12 @@ img {
   height: 32px;
   width: 32px;
 }
+img.big{
+  height: auto;
+  width: auto;
+  display: block;
+  margin-left: auto;
+}
 input[type="text"] {
   height: 32px;
   width: 400px;
@@ -29,6 +35,7 @@ input[type="text"]:hover {
 .border {
   border: 1px solid rgb(140, 140, 140);
   border-radius: 5px;
+  position: relative;
 }
 .end {
   margin-top: 10px;
