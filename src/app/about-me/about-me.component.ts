@@ -27,20 +27,20 @@ export class AboutMeComponent implements AfterViewInit {
   }
   ngAfterViewInit(): void {
     setTimeout(() => {
-      $(".my-name").animate({ opacity: 1 }, 2000);
+      $(".my-name").animate({ opacity: 1 }, 1500);
       setTimeout(() => {
         $(".title-string").animate({ opacity: 1 }, 1250, () => {
           for (let i = 0; i < environment.ILike.length; i++) {
-            $(`#skills-content-item-${i}`).animate({ top: `${80 * i + 20}px` }, 1000);
+            $(`#skills-content-item-${i}`).animate({ top: `${80 * i + 20}px` }, 750);
           }
           for (let i = 0; i < environment.DevList.length; i++) {
-            $(`#develop-content-item-${i}`).animate({ top: `${80 * i + 20}px` }, 1000);
+            $(`#develop-content-item-${i}`).animate({ top: `${80 * i + 20}px` }, 750);
           }
         });
         $(".about-skills p").animate({ opacity: 1 }, 1500);
         $(".i-develop-in__content__item img").animate({ opacity: 1 }, 1500);
       }, 500);
-    }, 1000);
+    }, 500);
   }
 
   ngOnInit(): void {

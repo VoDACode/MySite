@@ -89,7 +89,7 @@ export class MainMenuComponent implements OnInit {
     this.clearScrollAnimation(side);
     $(".content-box").animate({ top: "100px", bottom: "5%", left: "5%", right: "5%" }, 250, () => {
       let gotoObj = side == "left" ? { right: "-45%", left: "100%" } : { right: "100%", left: "-45%" }
-      $(".content-box").animate(gotoObj, 1500);
+      $(".content-box").animate(gotoObj, 1000);
       setTimeout(() =>
         this.scrollAnimation(side, () => {
           ended();
@@ -107,8 +107,8 @@ export class MainMenuComponent implements OnInit {
       }
       counter++;
       this.clearScrollAnimation(side);
-      $(`.preview-content-box.${side}`).animate({ left: '5%', right: '5%' }, 1500, () =>
-        $(`.preview-content-box.${side}`).animate({ top: "80px", bottom: "0", left: '0', right: '0' }, 700, f));
+      $(`.preview-content-box.${side}`).animate({ left: '5%', right: '5%' }, 1000, () =>
+        $(`.preview-content-box.${side}`).animate({ top: "80px", bottom: "0", left: '0', right: '0' }, 500, f));
     }
     f();
   }

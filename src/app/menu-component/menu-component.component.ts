@@ -33,7 +33,7 @@ export class MenuComponentComponent implements AfterViewInit {
       if (!val.url)
         return;
       //@ts-ignore
-      let url = val.url.slice(1);
+      let url = val.url.slice(1).split('#')[0];
       this.selected = (url == this.redirectUrl || this.url == url);
       if (this.selected) {
         let data = new MenuItemSelectEvent();

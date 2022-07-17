@@ -12,3 +12,6 @@
 .item__title {
   font-size: x-large;
 }
+p{
+  margin: 0!important;
+}

@@ -3,7 +3,7 @@
   <div class="main-content__projects">
     <div class="projects__list">
       <app-project-item-in-list *ngFor="let item of projects; index as i" [title]="item.title"
-        [description]="item.description" [selected]="item.select" (click)="onclick(item, i)">
+        [description]="item.description" [selected]="item.select" [tag]="item.tag">
       </app-project-item-in-list>
     </div>
   </div>

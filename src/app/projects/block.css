@@ -1,0 +1,32 @@
+.container{
+    margin: 10px;
+    position: relative;
+}
+.block{
+    background-color: rgb(0, 81, 255);
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.block,
+.empty-block{
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 175px;
+}
+.block::before{
+    content: attr(content);
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.block:hover {
+    font-size: 24px;
+    background-color: rgb(44, 109, 248);
+    transform: translate(calc(-5% - 5px), calc(-5% - 5px));
+    box-shadow: 10px 5px 5px rgb(0, 149, 255);
+    border: none;
+}
